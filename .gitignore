@@ -6,3 +6,6 @@ dist/
 # React Router
 /.react-router/
 /build/
+
+# Deploy to Github Pages
+!/.github/workflows
