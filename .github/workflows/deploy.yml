@@ -35,13 +35,14 @@ jobs:
       - name: Build Cultural Gold
         run: npm run build
 
-      # ... (after build step)
+      # ... previous steps (Build Cultural Gold) ...
 
-      # 1. Create .nojekyll to stop GitHub from ignoring files
+      # 1. FIX THE 404s (Disable Jekyll)
+      # This tells GitHub: "Don't ignore files starting with _"
       - name: Disable Jekyll
         run: touch build/client/.nojekyll
 
-      # 2. Fix 404s
+      # 2. Fix the Refresh 404s (Copy index to 404)
       - name: Create 404 fallback
         run: cp build/client/index.html build/client/404.html
 
