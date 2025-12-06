@@ -35,18 +35,17 @@ jobs:
       - name: Build Cultural Gold
         run: npm run build
 
-      # --------------------------------------------------------
-      # THE CRITICAL REACT ROUTER v7 STEPS
-      # --------------------------------------------------------
-      
-      # 1. The Anti-404 Hack
-      # We copy the main index file to 404.html so refreshing works.
-      # Note: RR7 outputs to 'build/client', not 'dist'
+      # ... (after build step)
+
+      # 1. Create .nojekyll to stop GitHub from ignoring files
+      - name: Disable Jekyll
+        run: touch build/client/.nojekyll
+
+      # 2. Fix 404s
       - name: Create 404 fallback
         run: cp build/client/index.html build/client/404.html
 
-      # 2. Upload the correct folder
-      # We tell GitHub to upload the 'build/client' folder
+      # 3. Upload artifact
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
