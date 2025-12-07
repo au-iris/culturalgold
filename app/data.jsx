@@ -1,33 +1,33 @@
 export const featuredCollections = [
   {
-    name: "ASO LUXE",
+    name: "Adé Aṣọ Apparel",
     symbol: `Adé - Yoruba: Crown`,
-    focus: "Premium Nigerian clothing",
+    focus: "Premium Nigerian",
     description:
       "Tailored kaftans, elevated Ankara sets, and modern statement pieces designed for intentional, confident style.",
-    category: "clothing"
+    category: "Clothing"
   },
   {
-    name: "UGO Footwear",
+    name: "Ugo Ṣepọ Stride",
     symbol: `Ugo - Igbo: Distinction`,
-    focus: "Curated American shoes",
+    focus: "Curated American",
     description:
       "Authenticated sneakers, luxury heels, and statement boots. Selected for condition, rarity, and cultural flavor.",
-    category: "footwear"
+    category: "Footwear"
   },
   {
     name: "Ori Attars",
     symbol: `Ori - Hausa–Yoruba: Essence`,
-    focus: "Luxury Fragrance Oils",
+    focus: "Luxury",
     description:
       "Bold concentrated oud fragrance oils blended with spice woods, resins, and botanical notes sourced from Dubai.",
-    category: "fragrance"
+    category: "Fragrances"
   },
   {
   name: "AKU Wellness",
   symbol: "Aku - Igbo: Vitality",
-  focus: "Premium Self-Care",
-  description: "A curated collection of botanical tonics, artisanal body butters, soaps, and wellness essentials — designed for rejuvination, healing, and functional indulgence.",
-  category: "wellness"
+  focus: "Premium",
+  description: "A curated collection of botanical tonic bitters, artisanal body butters, soaps, and wellness essentials. Crafted for rejuvination, healing, and functional elegance.",
+  category: "Self-Care"
 }
 ];

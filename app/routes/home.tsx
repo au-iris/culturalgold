@@ -11,12 +11,13 @@ export default function Home() {
             <article className="hero">
             <section>
             <h2 className="ital"><span className="em">Cultural</span>Infused Goods</h2>
-            <h3 className="ital">Priceless beyond <span className="em">GOLD</span></h3>
+            <h3 className="ital">Priceless beyond <span className="em">Gold</span></h3>
             <a className="btn" href="#shop">SHOP NOW</a>
             </section>
             </article>
 
-            <h2 id="shop" className="strong center">Cultural Collections</h2>
+            <div id="shop">.</div>
+            <h2  className="ital center">Cultural Collections</h2>
 
             <article className="collections">
                 {featuredCollections.slice(0, 2).map((collection: Collection): JSX.Element => (
@@ -38,7 +39,7 @@ function CollectionCard({ name, symbol, category, focus, description}: Collectio
         <div className="card collection" key={name}>
                         {/* <img src={`/images/${category}.jpg`} alt={name} /> */}
                         <h4 className="em">{name.toUpperCase()}</h4>
-                        <p>{focus}</p>
+                        <p>{focus} {category}</p>
                         <p>{description}</p>
                         <p className="right">{symbol}</p>
                         <a className="btn">View Collection</a>

@@ -49,20 +49,7 @@ h1, h2, h3, .brand-text {
   color: var(--accent-primary); /* Uses the terracotta color */
 
 }
-h1, .heading, .em {
-  font-family: var(--font-heading);
-  width: fit-content;
-  padding: 0 16px 0;
-  text-align: center;
-  color: transparent;
-  letter-spacing: 5px;
-  font-size: 32pt;
-  background-image: var(--gold);
-  -webkit-background-clip: text;
-  background-clip: text;
-  position: relative;
-  right: 16px;
-}
+
 
 * { box-sizing: border-box; padding: 0; margin: 0;}
 
@@ -94,7 +81,10 @@ body {
 }
 
 header {
-  background-color: var(--bg-panel);
+  position: sticky;
+  top: 0;
+  background-color: var(--bg-dark);
+  z-index: 11;
   padding: 20px;
   text-align: center;
   border-bottom: 4px solid var(--wood-red);
@@ -129,20 +119,42 @@ main {
 }
 
 footer {
-  min-height: 32px;
-  background-color: var(--bg-panel);
-  color: var(--text-muted);
-  padding: 15px;
-  border-top: 4px solid var(--wood-red);
-  margin-top: auto;
+  --height: 32vh;
   display: flex;
-  justify-content: space-between;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  justify-content: space-around;
+  border-top: var(--wood-red) solid 0.5rem;
   align-items: center;
+  background: var(--bg-dark);
+  height: fit-content;
+  box-sizing: border-box;
 }
 
-address {
-  font-family: var(--font-body);
+footer .links {
+  display: flex; flex-direction: column;
+  height: calc(var(--height) - 4vh);
+  justify-content: space-between;
+}
+footer .links h2 {
+  margin-left: 16px;
+}
+footer a {
   display: block;
+}
+
+#contact button.btn {
+  margin-top: 0.5rem;
+  color: var(--text);
+  padding: 0.7rem 1.2rem;
+  border-radius: 6px;
+  width: 100%;
+}
+
+.flex {
+  display: flex;
+  gap: 32px;
+  width: 80%;
 }
 
 article.hero section {
@@ -154,7 +166,7 @@ article.hero section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 16px;
+  gap: 32px;
 }
 article.hero section h2, article.hero section h3 {
   color: #fff;
@@ -184,10 +196,20 @@ article.hero section h2, article.hero section h3 {
   font-size: 1.2em;
 }
 
-.heading {
+
+h1, .heading, .em {
   font-family: var(--font-heading);
-  font-size: 2em;
-  color: var(--accent-primary); /* Uses the terracotta color */
+  width: fit-content;
+  padding: 0 16px 0;
+  text-align: center;
+  color: transparent;
+  letter-spacing: 5px;
+  font-size: 32pt;
+  background-image: var(--gold);
+  -webkit-background-clip: text;
+  background-clip: text;
+  position: relative;
+  right: 16px;
 }
 
 .strong {
@@ -200,40 +222,48 @@ article.hero section h2, article.hero section h3 {
   font-size: var(--font-body);
 }
 
+/* Horizontal collections */
 .collections {
   display: flex;
+  flex-direction: row;
+  justify-content: center;
   overflow-x: auto;
+  overflow-y: hidden;
+  gap: 2rem;
+  padding: 1rem 0;
+
   scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch; /* smooth scrolling on iOS */
-  gap: 1rem; /* spacing between cards */
-  padding: 1rem;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+
+  scrollbar-width: thin; /* Firefox */
+  scrollbar-color: rgba(200,200,200,0.4) rgba(0,0,0,0.05); /* thumb and track */
 }
 
-.card.collection {
-  flex: 0 0 auto; /* don’t shrink, keep intrinsic width */
-  min-width: 600px; /* adjust as needed */
-  width: 900px;
-  scroll-snap-align: start; /* snap each card to start */
-  border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    background: var(--bg-panel);
-  padding: 1rem;
-  transition: transform 0.3s ease;
-  justify-content: space-between;
-}
-.card.collection:hover {
-  transform: scale(1.05); /* optional hover pop */
-}
-
-
+/* Chrome, Safari, Edge */
 .collections::-webkit-scrollbar {
-  height: 8px; /* small horizontal scrollbar */
+  height: 8px;
 }
-
-.collections::-webkit-scrollbar-thumb {
-  background: rgba(0,0,0,0.0);
+.collections::-webkit-scrollbar-track {
+  background: rgba(0,0,0,0.05);
   border-radius: 4px;
 }
+.collections::-webkit-scrollbar-thumb {
+  background: rgba(200,200,200,0.4);
+  border-radius: 4px;
+}
+
+/* Snap items */
+.collection {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+  margin-bottom: 3rem;
+  border-radius: 1rem;
+  min-width: 500px;
+}
+
+
+/* Buttons inside collection cards */
 .card.collection .btn {
   font-size: 1rem;
   background: rgba(0,0,0,0.15);
@@ -242,6 +272,10 @@ article.hero section h2, article.hero section h3 {
 .card.collection .btn:hover {
   background: var(--accent-primary);
 }
+
+
+
+
 
 .contact-form{display:flex;flex-direction:column;gap:12px;max-width:520px}
 .contact-form input,.contact-form textarea{width:100%;padding:10px;border-radius:4px;border:1px solid #e8e8e8}
@@ -267,7 +301,13 @@ article.hero section h2, article.hero section h3 {
   text-align: right;
 }
 
-@media (max-width: 800px) {
+#shop {
+  margin-top: 44vh;
+  margin-bottom: 16vh; /* todo */
+  color: var(--bg-dark)
+}
+
+@media (max-width:1000px) {
   header {
     flex-direction: column;
     gap: 15px;
@@ -285,14 +325,28 @@ article.hero section h2, article.hero section h3 {
 
   .collections {
     flex-direction: column;
+    align-items: center;
   }
 
-  .collection.card {
-    max-width: 80vw;
+  .card.collection {
+    min-width: 0px;
+    width: 90vw;
   }
 
   footer {
-    flex-direction: column;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 3rem;
+    text-align: center;
+    height: fit-content;
+  }
+
+  footer * {
     gap: 16px;
+  }
+
+  footer a.em {
+    margin-left: 6rem;
   }
 }
