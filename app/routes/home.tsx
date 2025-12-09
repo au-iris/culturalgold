@@ -42,7 +42,7 @@ function CollectionCard({ name, symbol, category, focus, description}: Collectio
                         <p>{focus} {category}</p>
                         <p>{description}</p>
 
-                        {symbol.map(s => <p className="">{s}</p>)}
+                        {symbol.map(s => <a href="/culturalgold/about" className="right">{s}</a>)}
                         <a className="btn">View Collection</a>
                     </div>
     )

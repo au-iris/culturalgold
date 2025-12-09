@@ -38,6 +38,10 @@ body {
   font-family: var(--font-body);
   /* ... rest of body ... */
 }
+p, li, span {
+  line-height: 1.2rem;
+  letter-spacing: .03rem;
+}
 
 .ital {
   font-family: var(--font-ital);
@@ -269,18 +273,41 @@ h1, .heading, .em {
   font-size: 1rem;
   background: rgba(0,0,0,0.15);
   margin-left: auto;
+  margin-right: 1rem;
 }
 .card.collection .btn:hover {
   background: var(--accent-primary);
 }
+.card.collection .right {
+  border: solid var(--bg-dark) 1px;
+  border-radius: 1rem;
+  width: 70%;
+  padding: 1rem;
+  text-align: center;
+}
 
-
+.hero h2 span {
+  margin-right: -1.5rem;
+}
 
 
 
 .contact-form{display:flex;flex-direction:column;gap:12px;max-width:520px}
 .contact-form input,.contact-form textarea{width:100%;padding:10px;border-radius:4px;border:1px solid #e8e8e8}
-
+.contact-form label {
+  text-align: left;
+  line-height: 2rem;
+}
+.contact-form button {
+  text-align: right;
+  transition: text-align 0.3s ease;
+}
+.contact-form button:hover {
+  text-align: center;
+}
+.contact-form button:active {
+  text-align: left;
+}
 
 .card {
   background: var(--bg-panel);

@@ -10,17 +10,7 @@ export const featuredCollections = [
       "Tailored kaftans, elevated Ankara sets, and modern statement pieces designed for intentional, confident style.",
     category: "Clothing"
   },
-  {
-    name: "Ugo Ṣepọ Stride",
-    symbol: [
-      "Ugo  (Prestigious Distinction) Igbo",
-      "Ṣepọ (Connection) Yoruba"
-    ],
-    focus: "Curated American",
-    description:
-      "Authenticated sneakers, luxury heels, and statement boots. Selected for condition, rarity, and cultural flavor.",
-    category: "Footwear"
-  },
+  
   {
     name: "Ori Attars",
     symbol: [
@@ -39,5 +29,16 @@ export const featuredCollections = [
     focus: "Premium",
     description: "A curated collection of botanical tonic bitters, artisanal body butters, soaps, and wellness essentials. Crafted for rejuvenation, healing, and functional elegance.",
     category: "Self-Care"
-  }
+  },
+  {
+    name: "Ugo Ṣepọ Stride",
+    symbol: [
+      "Ugo  (Prestigious Distinction) Igbo",
+      "Ṣepọ (Connection) Yoruba"
+    ],
+    focus: "Curated American",
+    description:
+      "Authenticated sneakers, luxury heels, and statement boots. Selected for condition, rarity, and cultural flavor.",
+    category: "Footwear"
+  },
 ];

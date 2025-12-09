@@ -37,7 +37,7 @@ function Footer() {
             <a href="tel:+(980) 800-2822">(980) 800-2822</a>
             
             <div className="grid">
-            <SocialIcon className="social" url="www.instagram.com" href="https://www.instagram.com/" bgColor={`rgba(38, 38, 38, 0.5);`} />
+            <SocialIcon className="social" url="www.instagram.com" href="https://www.instagram.com/culturalgold79/" bgColor={`rgba(38, 38, 38, 0.5);`} />
             <SocialIcon className="social" url="www.facebook.com" href="https://www.facebook.com/" bgColor={`rgba(38, 38, 38, 0.5);`} />
             </div>
       </section>
