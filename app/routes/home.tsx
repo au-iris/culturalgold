@@ -14,7 +14,7 @@ export default function Home() {
   const [collections, setCollections] = useState<Collection[]>([]);
 
   useEffect(() => {
-    fetch("public/data/collections.json")
+    fetch("/culturalgold/data/collections.json")
       .then((res) => res.json())
       .then((data) => setCollections(data));
   }, []);
