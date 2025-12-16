@@ -78,19 +78,7 @@ main {
   border-radius: 1rem;
 }
 
-.scroll-img {
-  margin-top: 30vh;
-  position: relative;
-  right: 7%;
-  height: fit-content;
-  border-radius: 10px;
-}
-.scroll-img * {
-  border-radius: 10px;
-}
-.scroll-img .overlay {
-  height: 99%;
-}
+
 /* Smooth fade-in for shop */
 #shop {
   margin-bottom: 15vh;
@@ -173,15 +161,7 @@ p.desc {
     padding: 1rem;
     height: fit-content;
     width: 98vw;
-  }
-  .hero .img-container {
-    min-width: 100%;
-    width: none;
-    max-width: none;
-  }
-  .hero img {
-    min-width: 200rem;
-    height: auto;
+    margin-top: 10vh;
   }
   #shop {
     margin-bottom: 16vh;
@@ -193,15 +173,8 @@ p.desc {
     font-size: 1.5rem;
     text-align: center;
   }
-  .hero:hover .img-container {
-    transform: translateX(70%);
-    opacity: 1; 
-  }
   #shop {
     margin-top: -10vh;
-  }
-  main > a{
-    width: 300vw;
   }
 
 }
