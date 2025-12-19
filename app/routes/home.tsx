@@ -64,11 +64,11 @@ function CollectionCard({ name, symbol, category, focus, description }: Collecti
         <div className="card collection-card" key={name}>
           {/* <img src={`/images/${category}.jpg`} alt={name} /> */}
           <h4 className="em">{name.toUpperCase()}</h4>
-          <a href="/culturalgold/about">{symbol}</a>
+          
           <p>{focus} {category}</p>
           <p className='desc'>{description}</p>
 
-          
+          <a href="/culturalgold/about" className="symbol">{symbol}</a>
           <a className="btn" onClick={(e) => sendMessage(e)} href={`/culturalgold/collections/${category.toLowerCase()}`}>View Collection</a>
       </div>
   );

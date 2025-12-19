@@ -19,11 +19,12 @@ export default function About() {
                     <img src={"/culturalgold/images/pexels-harrun-muhammad-116282236-35117462.jpg"} alt="" />
                     <img className='side' src={"/culturalgold/images/pexels-adedamola-adetoyi-503771-35156547.jpg"} alt="" />
                     <img src={"/culturalgold/images/pexels-hcdigital-3347324.jpg"} alt="a tree standing in front of a starry night sky" />
+                    
                     </div>
                 </ParallaxLayer>
                 <ParallaxLayer speed={0.5}>
                     <article>
-                    
+                    <div className="overlay"></div>
                     <h2>About Us</h2>
             
                     <p>At Cultural Gold, we honor African by exhibiting our culture, celebrate expert craftsmanship, and create a space where global luxury becomes personal and deeply familiar. Every product, every detail, every package carries the love and intention of our roots.</p>

@@ -9,21 +9,23 @@ main {
     min-height: 88vh;
     margin-top: 12vh;
     position: relative;
+    padding: 0;
   }
 
 main article, main .container {
   display: flex;
   flex-direction: column;
   display: flex;
-  min-height: 80vh;
+  min-height: 100vh;
   height: 100%;
   flex-direction: column;
   gap: 5vh;
-  width: 60vw;
+  width: 100vw;
+  
 }
 .container {
   gap: 10vh;
-  height: fit-content;
+  height: 200vh;
 }
 main article * {
   width: calc(60vw - 4rem);
@@ -32,6 +34,9 @@ main article * {
 main article p {
   margin-bottom: 20vh;
   z-index: 3;
+}
+p.last {
+  margin-bottom: 0;
 }
 main .container img, main p {
   display: block;
@@ -47,22 +52,57 @@ main p, main h2 {
 main h2 {
   padding-top: 4rem;
 }
-main .overlay img {
+main img {
   z-index: 1;
+  height: 392px;
 }
 .overlay {
-  background-color: rgba(12,12,12, 0.5);
-  z-index: 1;
+  background-color: rgba(12,12,12, 0.1);
+  z-index: 5;
   width: 100%;
   height: 100%;
   position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 last {
   margin-bottom:  0;
 }
 @media (max-width: 769px) {
   main {
-    width: 100%;
+    width: 100vw;
+    padding: 2rem 0 0;
+    height: 92vh;
+    position: relative;
+    overflow: hidden;
+  }
+  main img {
+    min-width: 30vh;
+    position: relative;
+    left: 40vw;
+    top: 20vh;
+    margin-top: 16vh;
+    z-index: 0;
+  }
+  main img.last {
+    margin-bottom: 0;
+  }
+  main h2, main p {
+    min-width: 100vw;
+  }
+  article {
+    min-width: 100vw;
+  }
+  .overlay {
+    position: absolute;
+    top: 0;
+    z-index: 2;
+    left: 0;
+  }
+  .container {
+    min-height: 600vh;
   }
 }
 
@@ -72,6 +112,9 @@ last {
 
 /* Desktop */
 @media (min-width: 1025px) {
+  main {
+    height: 300vh;
+  }
   .container {
     position: relative;
     left:28vw;
