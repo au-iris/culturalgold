@@ -42,14 +42,15 @@ main article h2 {
 }
 .hero img {
   display: block;
-  min-width: 2266px;
-  max-width: 2266px;
+  min-width: 10000px;
   width: auto;
   height: 100%;
   position: absolute;
   z-index: 1;
   aspect-ratio: 5.78 / 1;
+  border: solid var(--wood-red) 1px;
   animation: slide infinite 30s ease-in-out;
+  border-radius: 4px;
 }
 
 
