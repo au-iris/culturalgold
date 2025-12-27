@@ -1,15 +1,88 @@
-main.about {
-    display: flex;
-    min-height: 70vh;
-    flex-direction: column;
-    gap: 5vh;
-    max-width: 90%;
-    margin: auto;
+/* about. css */
+/* ===== Media Queries ===== */
+@media only screen and (max-width: 576px) {
+  /* Extra small devices (phones - portrait) */
 }
-main ul {
-    display: grid;
-    grid-template-rows: auto-fit;
-    gap: 1rem;
-    padding-left: 1.5rem;
-    
+
+@media only screen and (min-width: 577px) and (max-width: 768px) {
+  /* Small devices (portrait tablets and large phones) */
+}
+
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+  /* Medium devices (landscape tablets and small desktops) */
+}
+
+@media only screen and (min-width: 993px) {
+  /* Large devices (desktops and laptops) */
+}
+
+/* ===== Main Section ===== */
+main {
+  --margin: 10vh;
+  min-height: 100vh;
+  height: fit-content;
+  margin: var(--margin) 0;
+  width: 100vw;
+}
+
+main h2 {
+  color: white;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+main img {
+  display: block;
+  max-width: 100vw;
+  z-index: 1;
+}
+
+/* ===== Text Styling ===== */
+p {
+  line-height: 1.6;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* ===== Image & Text Overlay Container ===== */
+.container {
+  position: relative;
+  width: 100%;
+}
+
+.image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 1;
+  transition: opacity 0.5s ease- in- out;
+}
+
+/* Hover effect: fade out on hover */
+.image:hover {
+  opacity: 0.7;
+}
+
+.text-overlay {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate();
+  z-index: 2;
+  width: 80%;
+  padding: 20px;
+  color: white;
+  font-size: 2rem;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  transition: opacity 0.5s ease-in-out;
+}
+
+/* Optional: enhance text overlay on hover */
+.text-overlay:hover {
+  opacity: 1;
 }
