@@ -68,7 +68,7 @@ function CollectionCard({ name, symbol, category, focus, description }: Collecti
           <p>{focus} {category}</p>
           <p className='desc'>{description}</p>
 
-          <a href="/culturalgold/about" className="symbol">{symbol}</a>
+          {/* <a href="/culturalgold/about" className="symbol">{symbol}</a> */}
           <a className="btn" onClick={(e) => sendMessage(e)} href={`/culturalgold/collections/${category.toLowerCase()}`}>View Collection</a>
       </div>
   );
